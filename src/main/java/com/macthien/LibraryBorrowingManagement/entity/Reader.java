@@ -13,10 +13,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class Reader {
-    private Long borrowTicketId;
     private String readerCode;
     private String bookCode;
-    private BorrowTicketStatus borrowTicketStatus;
-    private LocalDateTime borrowedAt;
-    private LocalDateTime returnedAt;
+
 }

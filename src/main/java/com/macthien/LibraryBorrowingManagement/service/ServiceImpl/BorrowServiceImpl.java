@@ -43,7 +43,7 @@ public class BorrowServiceImpl implements BorrowService {
 
         //Kiểm tra availableCopies > 0
         if (book.getAvailableCopies() <= 0) {
-            throw new ConflictException("Sách đã hết bản sao có thể mượn (availableCopies = 0)");
+            throw new ConflictException("Sách đã hết bản sao có thể mượn");
         }
 
         //Giảm availableCopies đi 1

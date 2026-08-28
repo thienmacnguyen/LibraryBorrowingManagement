@@ -7,6 +7,5 @@ import lombok.Data;
 public class ReaderRequest {
     @NotBlank
     private String readerCode;
-
     private String readerName;
 }
