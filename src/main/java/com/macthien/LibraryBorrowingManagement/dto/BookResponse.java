@@ -1,12 +1,19 @@
 package com.macthien.LibraryBorrowingManagement.dto;
 
-import com.macthien.LibraryBorrowingManagement.enums.BookStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class BookResponse {
 
-    private Long bookId;
     private String bookCode;
+    private String title;
     private Long totalCopies;
     private Long availableCopies;
-    private BookStatus bookStatus;
+    private boolean active;
 }

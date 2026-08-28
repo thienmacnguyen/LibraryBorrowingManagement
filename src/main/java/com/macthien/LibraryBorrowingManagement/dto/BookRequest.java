@@ -1,20 +1,19 @@
 package com.macthien.LibraryBorrowingManagement.dto;
 
-import com.macthien.LibraryBorrowingManagement.enums.BookStatus;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
 import lombok.Data;
 
 @Data
 public class BookRequest {
+    @NotBlank
+    private String bookCode;
+
+    @NotBlank
+    private String title;
+
     @NotNull
-    private String BookCode;
-
-    @Positive
+    @Min(value = 1)
     private Long totalCopies;
-
-    @Positive
-    private Long availableCopies;
-
-    private BookStatus bookStatus;
 }
