@@ -6,12 +6,14 @@ import com.macthien.LibraryBorrowingManagement.entity.Book;
 import com.macthien.LibraryBorrowingManagement.exception.ConflictException;
 import com.macthien.LibraryBorrowingManagement.exception.NotFoundException;
 import com.macthien.LibraryBorrowingManagement.service.BookService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Service
 public class BookServiceImpl implements BookService {
     private final Map<String, Book> bookStorage = new ConcurrentHashMap<>();
     @Override
