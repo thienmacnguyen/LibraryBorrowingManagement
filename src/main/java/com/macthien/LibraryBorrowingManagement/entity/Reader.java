@@ -1,27 +1,22 @@
 package com.macthien.LibraryBorrowingManagement.entity;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+import com.macthien.LibraryBorrowingManagement.enums.BorrowTicketStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
-@Table(name = "Reader")
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 public class Reader {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "reader_id")
-    private long readerId;
-
-    @Column(name = "reader_code")
+    private Long borrowTicketId;
     private String readerCode;
-
-    @Column(name = "reader_name")
-    private String readerName;
+    private String bookCode;
+    private BorrowTicketStatus borrowTicketStatus;
+    private LocalDateTime borrowedAt;
+    private LocalDateTime returnedAt;
 }
